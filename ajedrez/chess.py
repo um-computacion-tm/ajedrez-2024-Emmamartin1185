@@ -26,3 +26,5 @@ class Chess:
         else:
             self.__turn__ = "WHITE"
 
+    def is_playing(self):
+        ...
