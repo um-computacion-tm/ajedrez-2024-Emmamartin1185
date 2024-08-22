@@ -1,9 +1,6 @@
-from piece import Piece
+class Rook:
+    def __init__(self, color):
+        self.color = color  
 
-
-class Rook(Piece):
     def __str__(self):
-        if self.__color__ == "WHITE":
-            return "♜"
-        else:
-            return "♖"
+        return "♖" if self.color == "WHITE" else "♜"  

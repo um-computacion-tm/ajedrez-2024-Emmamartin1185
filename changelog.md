@@ -1,3 +1,8 @@
+# - 22-08-2024
+- Se mejoro el archivo board.py y muestra el tablero en la consola con pawns y rooks
+- Se arreglo el archivo test de board para confirmar que el tablero se muestra correctamente
+- Se arreglo pawn que no se podia mostrar en el tablero
+- Se testeo board 
 # - 21-08-2024
 - Se creo el archivo pawn.py con la funcion init,str ,valid_moves y move
 - Se creo el test de pawn
