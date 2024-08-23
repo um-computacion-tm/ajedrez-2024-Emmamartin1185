@@ -1,3 +1,8 @@
+# - 23-08-2024
+- Se creo el archivo king con la funcion init y str
+- Se creo el test de king con la funcion test_white_king y test_black_king
+- se creo el archivo queen
+- Se creo el archivo horse
 # - 22-08-2024
 - Se mejoro el archivo board.py y muestra el tablero en la consola con pawns y rooks
 - Se arreglo el archivo test de board para confirmar que el tablero se muestra correctamente
