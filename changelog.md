@@ -1,3 +1,7 @@
+# - 25-08-2024
+- Se creo el archivo bishop
+- Se creo el test de bishop
+- Se creo el test de queen
 # - 24-08-2024
 - Se creo el archivo horse con la funcion init y str
 - Se mejoro el test del archivo borad y king

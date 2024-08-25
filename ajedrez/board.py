@@ -2,6 +2,8 @@ from ajedrez.rook import Rook
 from ajedrez.pawn import Pawn
 from ajedrez.king import King  
 from ajedrez.horse import Horse
+from ajedrez.bishop import Bishop
+from ajedrez.queen import Queen
 
 class Board:
     def __init__(self):
@@ -27,6 +29,16 @@ class Board:
         self.__positions__[0][6] = Horse("BLACK")
         self.__positions__[7][1] = Horse("WHITE")
         self.__positions__[7][6] = Horse("WHITE") 
+
+        #Coloca los alfil
+        self.__positions__[0][2] = Bishop("BLACK")
+        self.__positions__[0][5] = Bishop("BLACK")
+        self.__positions__[7][2] = Bishop("WHITE")
+        self.__positions__[7][5] = Bishop("WHITE")
+
+        #Coloca las reinas
+        self.__positions__[0][3] = Queen("BLACK")
+        self.__positions__[7][3] = Queen("WHITE")
 
     def get_piece(self, row, col):
         return self.__positions__[row][col]
