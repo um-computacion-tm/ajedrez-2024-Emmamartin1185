@@ -1,3 +1,7 @@
+# - 24-08-2024
+- Se creo el archivo horse con la funcion init y str
+- Se mejoro el test del archivo borad y king
+- Se creo el test de horse
 # - 23-08-2024
 - Se creo el archivo king con la funcion init y str
 - Se creo el test de king con la funcion test_white_king y test_black_king

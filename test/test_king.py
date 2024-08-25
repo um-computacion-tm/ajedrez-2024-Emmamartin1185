@@ -1,4 +1,5 @@
 import unittest
+from ajedrez.king import King
 
 class TestKing(unittest.TestCase):
     def test_white_king(self):
@@ -11,4 +12,9 @@ class TestKing(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
- 
+
+
+
+
+
+

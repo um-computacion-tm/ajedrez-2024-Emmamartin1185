@@ -1,6 +1,7 @@
 from ajedrez.rook import Rook
 from ajedrez.pawn import Pawn
 from ajedrez.king import King  
+from ajedrez.horse import Horse
 
 class Board:
     def __init__(self):
@@ -20,6 +21,12 @@ class Board:
         # Coloca los reyes
         self.__positions__[0][4] = King("BLACK")
         self.__positions__[7][4] = King("WHITE")
+        
+        # Coloca los caballos 
+        self.__positions__[0][1] = Horse("BLACK")
+        self.__positions__[0][6] = Horse("BLACK")
+        self.__positions__[7][1] = Horse("WHITE")
+        self.__positions__[7][6] = Horse("WHITE") 
 
     def get_piece(self, row, col):
         return self.__positions__[row][col]
