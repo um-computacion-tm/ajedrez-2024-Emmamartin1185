@@ -1,4 +1,5 @@
-from chess import Chess
+from ajedrez.chess import Chess
+
 
 
 def main():
@@ -27,9 +28,8 @@ def play(chess):
 
 
 
-if __name__ == '__main__':
-    main()
 
 
-if __name__ == '__main__':
-    main()
+
+
+    

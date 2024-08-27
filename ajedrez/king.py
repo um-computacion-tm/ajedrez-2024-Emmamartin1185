@@ -6,6 +6,5 @@ class King:
        
         return "♔" if self.color == "WHITE" else "♚"  
     
-    def move(self, board, move):
-        pass
+   
 

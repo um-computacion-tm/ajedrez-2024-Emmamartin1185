@@ -1,7 +1,13 @@
+# - 26-08-2024
+Se le agrego a la clase rook la funcion can_move y is_path_clear
+Se mejoro el test de rook con la funcion test_rook_valid_move_horizontal, test_rook_valid_move_vertical, test_rook_invalid_move_diagonal, test_rook_path_blocked_horizontal, test_rook_path_blocked_vertical, test_rook_path_clear
 # - 25-08-2024
-- Se creo el archivo bishop
+- Se creo el archivo bishop con la funcion init y str
 - Se creo el test de bishop
-- Se creo el test de queen
+- Se agrego al archivo queen la funcion init y str
+- Se mejoro el test de board
+- Se creo el test de pawn con la funcion test_pawn_representation
+
 # - 24-08-2024
 - Se creo el archivo horse con la funcion init y str
 - Se mejoro el test del archivo borad y king

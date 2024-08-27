@@ -1,22 +1,44 @@
 import unittest
 from ajedrez.rook import Rook
 
-def test_rook_valid_move():
-    rook = Rook("WHITE")
+class TestRook(unittest.TestCase):
+    def setUp(self):
+        # Tablero vacío de 8x8 (None representa una casilla vacía)
+        self.empty_board = [[None for _ in range(8)] for _ in range(8)]
 
-    # Movimiento válido en la misma fila
-    assert rook.is_valid_move(0, 0, 0, 5) is True
-    # Movimiento válido en la misma columna
-    assert rook.is_valid_move(0, 0, 5, 0) is True
-    # Movimiento inválido en diagonal
-    assert rook.is_valid_move(0, 0, 5, 5) is False
+    def test_rook_valid_move_horizontal(self):
+        rook = Rook("WHITE")
+        # Movimiento válido en la misma fila (horizontal)
+        self.assertTrue(rook.can_move(0, 0, 0, 5, self.empty_board))
 
-def test_rook_color():
-    rook_black = Rook("BLACK")
-    rook_white = Rook("WHITE")
+    def test_rook_valid_move_vertical(self):
+        rook = Rook("WHITE")
+        # Movimiento válido en la misma columna (vertical)
+        self.assertTrue(rook.can_move(0, 0, 5, 0, self.empty_board))
 
-    assert rook_black.color == "BLACK"
-    assert rook_white.color == "WHITE" 
+    def test_rook_invalid_move_diagonal(self):
+        rook = Rook("WHITE")
+        # Movimiento inválido en diagonal
+        self.assertFalse(rook.can_move(0, 0, 5, 5, self.empty_board))
 
-if __name__ == '__main__':
+    def test_rook_path_blocked_horizontal(self):
+        rook = Rook("WHITE")
+        # Colocamos una pieza en el camino
+        self.empty_board[0][3] = Rook("BLACK")
+        # Intento de movimiento horizontal con una pieza bloqueando
+        self.assertFalse(rook.can_move(0, 0, 0, 5, self.empty_board))
+
+    def test_rook_path_blocked_vertical(self):
+        rook = Rook("WHITE")
+        # Colocamos una pieza en el camino
+        self.empty_board[3][0] = Rook("BLACK")
+        # Intento de movimiento vertical con una pieza bloqueando
+        self.assertFalse(rook.can_move(0, 0, 5, 0, self.empty_board))
+
+    def test_rook_path_clear(self):
+        rook = Rook("WHITE")
+        # Movimiento válido en línea recta (horizontal) sin piezas bloqueando
+        self.assertTrue(rook.can_move(0, 0, 0, 7, self.empty_board))
+
+if __name__ == "__main__":
     unittest.main()
