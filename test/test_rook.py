@@ -39,6 +39,13 @@ class TestRook(unittest.TestCase):
         rook = Rook("WHITE")
         # Movimiento válido en línea recta (horizontal) sin piezas bloqueando
         self.assertTrue(rook.can_move(0, 0, 0, 7, self.empty_board))
+    def test_rook_captures_opponent(self):
+        rook = Rook("WHITE")
+        # Colocamos una pieza del oponente en el destino
+        self.empty_board[0][5] = Rook("BLACK")
+        # La torre debe poder capturar la pieza negra
+        self.assertTrue(rook.can_move(0, 0, 0, 5, self.empty_board))
 
-if __name__ == "__main__":
+
+if __name__ == "__main__": 
     unittest.main()

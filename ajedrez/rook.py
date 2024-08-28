@@ -1,4 +1,4 @@
-class Rook:    #prueba de clase
+class Rook:
     def __init__(self, color):
         self.color = color
 
@@ -13,6 +13,13 @@ class Rook:    #prueba de clase
         if from_row == to_row or from_col == to_col:
             # Verifica si el camino está libre (no hay piezas entre la posición inicial y la final)
             if self.is_path_clear(from_row, from_col, to_row, to_col, board):
+                # Verifica si hay una pieza en el destino
+                destination_piece = board[to_row][to_col]
+                if destination_piece is not None:
+                    # No se puede capturar una pieza del mismo color
+                    if destination_piece.color == self.color:
+                        return False
+                # Si pasó todas las verificaciones, el movimiento es válido
                 return True
         return False
 
