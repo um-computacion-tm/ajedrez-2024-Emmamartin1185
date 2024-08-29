@@ -9,5 +9,9 @@ class Piece:
         raise NotImplementedError("Este método debe ser implementado por las subclases")
 
     def get_color(self):
-        return self.color
+        return self.color 
+   
+    def can_move(self, from_row, from_col, to_row, to_col, board):
+        raise NotImplementedError("Este método debe ser implementado por las subclases")
+
 

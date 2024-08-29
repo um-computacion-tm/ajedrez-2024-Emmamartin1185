@@ -51,6 +51,13 @@ class Board:
                 row_str += str(piece) if piece else " "
             rows.append(row_str)
         return "\n".join(rows)
+    def move_piece(self, from_row, from_col, to_row, to_col):
+        piece = self.positions[from_row][from_col]
+        if piece and piece.can_move(from_row, from_col, to_row, to_col, self.positions):
+            self.positions[to_row][to_col] = piece
+            self.positions[from_row][from_col] = None
+        else:
+            print("Movimiento inválido") 
 
 if __name__ == "__main__":
     board = Board()

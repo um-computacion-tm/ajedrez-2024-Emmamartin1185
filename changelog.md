@@ -1,5 +1,8 @@
+# - 29-08-2024
+Se mejoro a la clase board conla funcion move piece
+Se mejoro la clase chess con la funcion can move 
 # - 28-08-2024
-Se mejoro el test de rook con la funcion test_rook_captures_opponent
+Se mejoro el test de rook con la funcion test rook captures_opponent
 Se mejoro a la clase rook la funcion is path clear
 # - 26-08-2024
 Se le agrego a la clase rook la funcion can_move y is_path_clear
