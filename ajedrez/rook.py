@@ -38,3 +38,12 @@ class Rook:
                 if board[row][from_col] is not None:
                     return False
         return True
+    def can_capture_or_move(self, to_row, to_col, board):
+        """
+        Verifica si la torre puede moverse a la posición destino o capturar una pieza.
+        """
+        destination_piece = board[to_row][to_col]
+        if destination_piece is not None:
+            if destination_piece.color == self.color:
+                return False  # No se puede capturar una pieza del mismo color
+        return True

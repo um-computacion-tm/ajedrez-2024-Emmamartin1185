@@ -58,6 +58,7 @@ class Board:
             self.positions[from_row][from_col] = None
         else:
             print("Movimiento inválido") 
+    
 
 if __name__ == "__main__":
     board = Board()

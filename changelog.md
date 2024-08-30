@@ -1,3 +1,6 @@
+# - 30-08-2024
+Se mejoro la clase rook con la funcion can capture or move
+Se mejoro el test de rook con la funcion test rook captures opponent
 # - 29-08-2024
 Se mejoro a la clase board conla funcion move piece
 Se mejoro la clase chess con la funcion can move 
