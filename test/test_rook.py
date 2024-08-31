@@ -52,5 +52,19 @@ class TestRook(unittest.TestCase):
         self.empty_board[0][5] = Rook("BLACK")
         # La torre debe poder capturar la pieza negra
         self.assertTrue(rook.can_move(0, 0, 0, 5, self.empty_board))
+    
+    def test_rook_cannot_capture_own_piece(self):
+        rook = Rook("WHITE")
+        self.empty_board[0][0] = rook
+        # Colocamos una pieza del mismo color en el destino
+        self.empty_board[0][5] = Rook("WHITE")
+        # La torre no debe poder capturar la pieza blanca
+        self.assertFalse(rook.can_move(0, 0, 0, 5, self.empty_board))
+
+    def test_rook_cannot_move_out_of_board(self):
+        rook = Rook("WHITE")
+        self.empty_board[0][0] = rook
+        # Intento de movimiento fuera del tablero
+        self.assertFalse(rook.can_move(0, 0, 0, 8, self.empty_board))
 if __name__ == "__main__": 
     unittest.main()

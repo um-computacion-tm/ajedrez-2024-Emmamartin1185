@@ -1,3 +1,6 @@
+# - 31-08-2024
+Se mejoro el test de rook con la funcion test rook cannot capture own piece
+Se mejoro el test de rook con la funcion test rook cannot move out of board
 # - 30-08-2024
 Se mejoro la clase rook con la funcion can capture or move
 Se mejoro el test de rook con la funcion test rook captures opponent
