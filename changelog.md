@@ -1,3 +1,7 @@
+# - 01-09-2024
+Se mejoro el test de pawn con la funcion test pawn initial double move white
+Se mejoro el test de pawn con la funcion test set Up
+
 # - 31-08-2024
 Se mejoro el test de rook con la funcion test rook cannot capture own piece
 Se mejoro el test de rook con la funcion test rook cannot move out of board
