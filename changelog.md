@@ -1,3 +1,6 @@
+# - 02-09-2024
+Se le agrego a la clase pawn la funcion valid moves
+Se le agrego a la clase pawn la funcion move
 # - 01-09-2024
 Se mejoro el test de pawn con la funcion test pawn initial double move white
 Se mejoro el test de pawn con la funcion test set Up
