@@ -66,5 +66,6 @@ class TestRook(unittest.TestCase):
         self.empty_board[0][0] = rook
         # Intento de movimiento fuera del tablero
         self.assertFalse(rook.can_move(0, 0, 0, 8, self.empty_board))
+                
 if __name__ == "__main__": 
     unittest.main()

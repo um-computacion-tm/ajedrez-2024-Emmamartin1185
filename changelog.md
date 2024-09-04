@@ -1,3 +1,5 @@
+# - 03-09-2024
+Se agrego la funcion can move a la clase bishop
 # - 02-09-2024
 Se le agrego a la clase pawn la funcion valid moves
 Se le agrego a la clase pawn la funcion move
