@@ -1,3 +1,5 @@
+# - 04-09-2024
+Se agrego la funcion is path clear a la clase bishop
 # - 03-09-2024
 Se agrego la funcion can move a la clase bishop
 # - 02-09-2024
