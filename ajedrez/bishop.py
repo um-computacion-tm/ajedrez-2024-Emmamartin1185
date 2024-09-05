@@ -1,4 +1,5 @@
 class Bishop:
+    import unittest
     def __init__(self, color):
         self.color = color
 
@@ -46,3 +47,12 @@ class Bishop:
             col += col_step
         
         return True
+    def test_bishop_capture_opponent(self):
+        bishop = Bishop("WHITE")
+        # Colocamos una pieza del oponente en la casilla de destino
+        self.empty_board[2][4] = Bishop("BLACK")
+        # El alfil debe poder capturar la pieza negra
+        self.assertTrue(bishop.can_move(0, 2, 2, 4, self.empty_board))
+
+if __name__ == "__main__":
+    unittest.main()

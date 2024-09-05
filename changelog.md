@@ -1,3 +1,5 @@
+# - 05-09-2024
+Se creo el test de bishop con la funcion test bishop valid move diagonal y Set Up
 # - 04-09-2024
 Se agrego la funcion is path clear a la clase bishop
 # - 03-09-2024
