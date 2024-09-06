@@ -9,3 +9,17 @@ class TestBishop(unittest.TestCase):
         bishop = Bishop("WHITE")
         # Movimiento válido en diagonal
         self.assertTrue(bishop.can_move(0, 2, 3, 5, self.empty_board))
+    
+    def test_bishop_path_blocked(self):
+        bishop = Bishop("WHITE")
+        # Colocamos una pieza en el camino
+        self.empty_board[1][1] = Bishop("BLACK")
+        # Movimiento bloqueado en diagonal
+        self.assertFalse(bishop.can_move(0, 0, 2, 2, self.empty_board))
+ 
+    def test_bishop_captures_opponent(self):
+        bishop = Bishop("WHITE")
+        # Colocamos una pieza del oponente en el destino
+        self.empty_board[2][2] = Bishop("BLACK")
+        # El alfil debe poder capturar la pieza negra
+        self.assertTrue(bishop.can_move(0, 0, 2, 2, self.empty_board))

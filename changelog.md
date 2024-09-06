@@ -1,3 +1,6 @@
+# - 06-09-2024
+Se mejoro el test de bishop con la funcion test bishop path blocked
+Se mejoro el test de bishop con la funcion test bishop captures opponent
 # - 05-09-2024
 Se creo el test de bishop con la funcion test bishop valid move diagonal y Set Up
 # - 04-09-2024
