@@ -33,9 +33,9 @@ class Bishop:
 
         return False
     def is_path_clear(self, from_row, from_col, to_row, to_col, board):
-        """
-        Verifica si no hay piezas en el camino para el alfil.
-        """
+        
+        # Verifica si no hay piezas en el camino para el alfil.
+        
         row_step = 1 if to_row > from_row else -1
         col_step = 1 if to_col > from_col else -1
         
@@ -47,12 +47,5 @@ class Bishop:
             col += col_step
         
         return True
-    def test_bishop_capture_opponent(self):
-        bishop = Bishop("WHITE")
-        # Colocamos una pieza del oponente en la casilla de destino
-        self.empty_board[2][4] = Bishop("BLACK")
-        # El alfil debe poder capturar la pieza negra
-        self.assertTrue(bishop.can_move(0, 2, 2, 4, self.empty_board))
-
-if __name__ == "__main__":
-    unittest.main()
+    
+           

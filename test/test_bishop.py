@@ -23,3 +23,10 @@ class TestBishop(unittest.TestCase):
         self.empty_board[2][2] = Bishop("BLACK")
         # El alfil debe poder capturar la pieza negra
         self.assertTrue(bishop.can_move(0, 0, 2, 2, self.empty_board))
+    
+    def test_bishop_captures_own_piece(self):
+        bishop = Bishop("BLACK")
+        # Colocamos una pieza del oponente en el destino
+        self.empty_board[2][2] = Bishop("WHITE")
+        # El alfil debe poder capturar la pieza blanca
+        self.assertTrue(bishop.can_move(0, 0, 2, 2, self.empty_board))
