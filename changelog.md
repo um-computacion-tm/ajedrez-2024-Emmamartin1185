@@ -1,3 +1,8 @@
+# - 08-09-2024
+Se creo la clase InvalidMoveError para excepciones relacionadas con el ajedrez
+Contiene la funcion init para pasar los parametros de la excepcion
+# - 07-09-2024
+Se mejoro el test de bishop con la funcion test bishop captures own piece
 # - 06-09-2024
 Se mejoro el test de bishop con la funcion test bishop path blocked
 Se mejoro el test de bishop con la funcion test bishop captures opponent
