@@ -1,3 +1,6 @@
+# - 09-09-2024
+Se creo la clase InvalidPieceError con la funcion init 
+Se creo la clase PieceNotFoundError con la funcion init
 # - 08-09-2024
 Se creo la clase InvalidMoveError para excepciones relacionadas con el ajedrez
 Contiene la funcion init para pasar los parametros de la excepcion
