@@ -1,3 +1,6 @@
+# - 10-09-2024
+Se creo la clase PathBlockedError con la funcion init
+Se creo la clase SameColorCaptureError con la funcion init
 # - 09-09-2024
 Se creo la clase InvalidPieceError con la funcion init 
 Se creo la clase PieceNotFoundError con la funcion init
