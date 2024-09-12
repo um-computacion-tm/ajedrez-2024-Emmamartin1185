@@ -39,3 +39,8 @@ class SameColorCaptureError(ChessError):
         self.to_position = to_position
         self.message = f"{message}: {from_position} -> {to_position}"
         super().__init__(self.message)
+
+class CheckError(ChessError):
+    """Excepción levantada cuando un movimiento pone al rey en jaque."""
+    def __init__(self, message="Movimiento inválido: el rey está en jaque"):
+        super().__init__(message)
