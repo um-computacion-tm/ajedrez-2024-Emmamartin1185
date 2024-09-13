@@ -1,3 +1,6 @@
+# - 13-09-2024
+Se mejoro la clase queen con la funcion can move
+Se mejoro el test de queen con la funcion is path clear straight
 # - 11-09-2024
 Se creo la clase CheckError con la funcion init
 # - 10-09-2024
