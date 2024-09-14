@@ -1,3 +1,5 @@
+# - 14-09-2024
+Se mejoro la clase queen con la funcion is path clear diagonal
 # - 13-09-2024
 Se mejoro la clase queen con la funcion can move
 Se mejoro el test de queen con la funcion is path clear straight

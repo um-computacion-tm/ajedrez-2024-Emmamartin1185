@@ -37,5 +37,24 @@ class Queen:
                 if board[row][from_col] is not None:
                     return False
         return True
-
+    
+    def is_path_clear_diagonal (self, from_row, from_col, to_row, to_col, board):
+        """
+        Verifica si no hay piezas en el camino para movimientos en diagonal (como el alfil).
+        """
+        if abs(to_row - from_row) == abs(to_col - from_col):
+            if from_row == to_row:  # Movimiento horizontal
+                step = 1 if to_col > from_col else -1
+                for col in range(from_col + step, to_col, step):
+                    if board[from_row][col] is not None:
+                        return False
+            elif from_col == to_col:  # Movimiento vertical
+                step = 1 if to_row > from_row else -1
+                for row in range(from_row + step, to_row, step):
+                    if board[row][from_col] is not None:
+                        return False
+        return True
+    
+        
+        
     
