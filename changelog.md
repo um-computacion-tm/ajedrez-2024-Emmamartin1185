@@ -1,3 +1,6 @@
+# - 16-09-2024
+Se mejoro el test de queen con la funcion test queen valid move vertical
+Se mejoro el test de queen con la funcion test queen valid move horizontal
 # - 15-09-2024
 Se empezo el test de queen con la clase TestQueen con la funcion setUp
 # - 14-09-2024
