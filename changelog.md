@@ -1,3 +1,6 @@
+# - 17-09-2024
+Se mejoro el test de queen con la funcion test queen valid move diagonal
+Se mejoro el test de queen con la funcion test queen invalid move
 # - 16-09-2024
 Se mejoro el test de queen con la funcion test queen valid move vertical
 Se mejoro el test de queen con la funcion test queen valid move horizontal
