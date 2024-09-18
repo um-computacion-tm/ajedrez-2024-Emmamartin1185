@@ -25,3 +25,15 @@ class TestQueen(unittest.TestCase):
         queen = Queen("WHITE")
         # Movimiento inválido (no es ni diagonal ni en línea recta)
         self.assertFalse(queen.can_move(0, 0, 3, 4, self.empty_board))
+
+    def test_queen_path_blocked_straight(self):
+        queen = Queen("WHITE")
+        # Colocamos una pieza en el camino (movimiento vertical bloqueado)
+        self.empty_board[2][0] = Queen("BLACK")
+        self.assertFalse(queen.can_move(0, 0, 5, 0, self.empty_board))
+
+    def test_queen_path_blocked_diagonal(self):
+        queen = Queen("WHITE")
+        # Colocamos una pieza en el camino (movimiento diagonal bloqueado)
+        self.empty_board[2][2] = Queen("BLACK")
+        self.assertFalse(queen.can_move(0, 0, 3, 3, self.empty_board))
