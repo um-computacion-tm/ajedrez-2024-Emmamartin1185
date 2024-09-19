@@ -1,3 +1,6 @@
+# - 19-09-2024
+Se mejoro el test de queen con la funcion test queen no capture ally
+Se mejoro el test de queen con la funcion test queen capture opponent
 # - 18-09-2024
 Se mejoro el test de queen con la funcion test queen path blocked diagonal
 Se mejoro el test de queen con la funcion test queen path blocked straight

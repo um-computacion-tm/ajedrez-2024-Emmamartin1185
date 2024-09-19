@@ -37,3 +37,20 @@ class TestQueen(unittest.TestCase):
         # Colocamos una pieza en el camino (movimiento diagonal bloqueado)
         self.empty_board[2][2] = Queen("BLACK")
         self.assertFalse(queen.can_move(0, 0, 3, 3, self.empty_board))
+
+    def test_queen_capture_opponent(self):
+        queen = Queen("WHITE")
+        # Colocamos una pieza del oponente en el destino
+        self.empty_board[0][5] = Queen("BLACK")
+        # La reina debe poder capturar la pieza negra
+        self.assertTrue(queen.can_move(0, 0, 0, 5, self.empty_board))
+
+    def test_queen_no_capture_ally(self):
+        queen = Queen("WHITE")
+        # Colocamos una pieza aliada en el destino
+        self.empty_board[0][5] = Queen("WHITE")
+        # La reina no debe poder capturar una pieza aliada
+        self.assertFalse(queen.can_move(0, 0, 0, 5, self.empty_board))
+
+if __name__ == "__main__":
+    unittest.main()
