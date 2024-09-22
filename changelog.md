@@ -1,3 +1,5 @@
+# - 21-09-2024
+Se agrego al test pawn invalid capture forward
 # - 19-09-2024
 Se mejoro el test de queen con la funcion test queen no capture ally
 Se mejoro el test de queen con la funcion test queen capture opponent

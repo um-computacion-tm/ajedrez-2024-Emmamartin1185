@@ -19,5 +19,9 @@ class TestPawn(unittest.TestCase):
         # Movimiento inicial válido de dos casillas para peón blanco
         self.assertTrue(pawn.can_move(6, 0, 4, 0, self.empty_board))
 
-if __name__ == "__main__":
-    unittest.main()
+    def test_pawn_invalid_capture_forward(self):
+        pawn = Pawn( "WHITE")
+        # Colocamos una pieza del oponente en frente del peón
+        self.empty_board[0][5] = Pawn("BLACK")
+        # Movimiento inválido porque no puede capturar hacia adelante
+        self.assertFalse(pawn.can_move(0, 0, 0, 5, self.empty_board))
