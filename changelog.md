@@ -1,3 +1,6 @@
+# - 22-09-2024
+Se agrego al test pawn invalid double move after first
+Se agrego al test pawn move blocked
 # - 21-09-2024
 Se agrego al test pawn invalid capture forward
 # - 19-09-2024

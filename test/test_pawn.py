@@ -25,3 +25,17 @@ class TestPawn(unittest.TestCase):
         self.empty_board[0][5] = Pawn("BLACK")
         # Movimiento inválido porque no puede capturar hacia adelante
         self.assertFalse(pawn.can_move(0, 0, 0, 5, self.empty_board))
+
+    def test_pawn_move_blocked(self):
+        pawn = Pawn("WHITE")
+        # Colocamos una pieza en frente del peón
+        self.empty_board[5][0] = Pawn("BLACK")
+        # Movimiento bloqueado (no puede moverse hacia adelante)
+        self.assertFalse(pawn.can_move(6, 0, 5, 0, self.empty_board))
+
+    def test_pawn_invalid_double_move_after_first(self):
+        pawn = Pawn("WHITE")
+        # Movimiento inicial válido
+        self.assertTrue(pawn.can_move(6, 0, 4, 0, self.empty_board))
+        # Movimiento inválido de dos casillas después del inicial
+        self.assertFalse(pawn.can_move(4, 0, 2, 0, self.empty_board))
