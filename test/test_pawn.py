@@ -39,3 +39,13 @@ class TestPawn(unittest.TestCase):
         self.assertTrue(pawn.can_move(6, 0, 4, 0, self.empty_board))
         # Movimiento inválido de dos casillas después del inicial
         self.assertFalse(pawn.can_move(4, 0, 2, 0, self.empty_board))
+
+    def test_pawn_cannot_capture_own_piece(self):
+        pawn = Pawn("WHITE")
+        # Colocamos una pieza propia en la casilla diagonal
+        self.empty_board[5][1] = Pawn("WHITE")
+        # Movimiento inválido porque no puede capturar su propia pieza
+        self.assertFalse(pawn.can_move(6, 0, 5, 1, self.empty_board))
+
+if __name__ == "__main__":
+    unittest.main()    

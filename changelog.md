@@ -1,3 +1,5 @@
+# - 23-09-2024
+Se agrego al test de pawn can not capture own piece
 # - 22-09-2024
 Se agrego al test pawn invalid double move after first
 Se agrego al test pawn move blocked
