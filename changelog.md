@@ -1,3 +1,5 @@
+# - 26-09-2024
+Se agrego a la clase horse la funcion is valid destination
 # - 25-09-2024
 Se agrego a la clase horse la funcion can move
 # - 23-09-2024

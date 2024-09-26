@@ -20,3 +20,16 @@ class Horse:
             return self._is_valid_destination(to_row, to_col, board)
 
         return False
+
+    def _is_valid_destination(self, to_row, to_col, board):
+        """
+        Verifica si la casilla de destino es válida (está vacía o contiene una pieza del oponente).
+        """
+        destination_piece = board[to_row][to_col]
+        # Casilla vacía
+        if destination_piece is None:
+            return True
+        # Hay una pieza del oponente en la casilla
+        elif destination_piece.color != self.color:
+            return True  # Captura válida
+        return False  # No puede capturar una pieza del mismo color
