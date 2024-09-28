@@ -1,3 +1,7 @@
+# - 27-09-2024
+Se agrego al test de horse valid move
+Se agrego al test de horso Set Up
+Se agrego al test de horse representation
 # - 26-09-2024
 Se agrego a la clase horse la funcion is valid destination
 # - 25-09-2024
