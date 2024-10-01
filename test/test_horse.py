@@ -20,3 +20,17 @@ class TestHorse(unittest.TestCase):
         self.assertTrue(horse.can_move(4, 4, 6, 3, self.empty_board))  # 2 hacia abajo, 1 a la izquierda
         self.assertTrue(horse.can_move(4, 4, 5, 6, self.empty_board))  # 1 hacia abajo, 2 a la derecha
         self.assertTrue(horse.can_move(4, 4, 5, 2, self.empty_board))  # 1 hacia abajo, 2 a la izquierda
+ 
+    def test_horse_invalid_move(self):
+        horse = Horse("WHITE")
+        # Movimientos inválidos (no en L)
+        self.assertFalse(horse.can_move(4, 4, 4, 5, self.empty_board))  # Movimiento horizontal
+        self.assertFalse(horse.can_move(4, 4, 5, 5, self.empty_board))  # Movimiento diagonal
+        self.assertFalse(horse.can_move(4, 4, 3, 3, self.empty_board))  # Movimiento en otra dirección
+
+    def test_horse_capture_opponent(self):
+        horse = Horse("WHITE")
+        # Colocamos una pieza del oponente en el destino
+        self.empty_board[6][5] = Horse("BLACK")
+        # El caballo debe poder capturar la pieza negra
+        self.assertTrue(horse.can_move(4, 4, 6, 5, self.empty_board))

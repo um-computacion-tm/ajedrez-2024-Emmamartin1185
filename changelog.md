@@ -1,3 +1,6 @@
+# - 30-09-2024
+- Se mejoro el test de horaw con la funcion test horse capture opponent
+- Se mejoro el test de horse con la funcion test horse invalid move
 # - 27-09-2024
 Se agrego al test de horse valid move
 Se agrego al test de horso Set Up
