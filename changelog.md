@@ -1,3 +1,8 @@
+# - 31-09-2024
+Se mejoro el test de horse con la funcion test horse cannot capture own piece
+Se mejoro el test de bishop con la funcion test bishop long diagonal clear
+Se mejoro el test de bishop con la funcion test bishop long diagonal blocked
+Se mejoro el test de bishop con la funcion test bishop blocked by own piece
 # - 30-09-2024
 - Se mejoro el test de horaw con la funcion test horse capture opponent
 - Se mejoro el test de horse con la funcion test horse invalid move

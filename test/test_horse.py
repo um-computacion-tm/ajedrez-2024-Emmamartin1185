@@ -34,3 +34,14 @@ class TestHorse(unittest.TestCase):
         self.empty_board[6][5] = Horse("BLACK")
         # El caballo debe poder capturar la pieza negra
         self.assertTrue(horse.can_move(4, 4, 6, 5, self.empty_board))
+
+
+    def test_horse_cannot_capture_own_piece(self):
+        horse = Horse("WHITE")
+        # Colocamos una pieza propia en el destino
+        self.empty_board[6][5] = Horse("WHITE")
+        # El caballo no debe poder capturar su propia pieza
+        self.assertFalse(horse.can_move(4, 4, 6, 5, self.empty_board))
+
+if __name__ == "__main__":
+    unittest.main()
