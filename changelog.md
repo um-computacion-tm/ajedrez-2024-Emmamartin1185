@@ -1,3 +1,6 @@
+# - 02-10-2024
+Se mejoro el test de bishop con la funcion test_bishop_move_diagonal_with_obstacles
+Se mejoro el test de bishop con la funcion test_bishop_cannot_capture_same_color
 # - 31-09-2024
 Se mejoro el test de horse con la funcion test horse cannot capture own piece
 Se mejoro el test de bishop con la funcion test bishop long diagonal clear

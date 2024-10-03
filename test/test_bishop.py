@@ -50,5 +50,19 @@ class TestBishop(unittest.TestCase):
         # El alfil no puede saltar sobre su propia pieza
         self.assertFalse(bishop.can_move(0, 0, 2, 2, self.empty_board))
 
+    def test_bishop_cannot_capture_same_color(self):
+        bishop = Bishop("WHITE")
+        # Colocamos una pieza del mismo color en la casilla de destino
+        self.empty_board[2][2] = Bishop("WHITE")
+        # El alfil no debe poder capturar una pieza de su mismo color
+        self.assertFalse(bishop.can_move(0, 0, 2, 2, self.empty_board))
+
+    def test_bishop_move_diagonal_with_obstacles(self):
+        bishop = Bishop("BLACK")
+        # Colocamos una pieza bloqueando el camino en diagonal
+        self.empty_board[3][3] = Bishop("WHITE")
+        # Intento de movimiento diagonal con una pieza bloqueando
+        self.assertFalse(bishop.can_move(2, 2, 5, 5, self.empty_board))
+
 if __name__ == "__main__":
     unittest.main()
