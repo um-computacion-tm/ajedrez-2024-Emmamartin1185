@@ -1,3 +1,7 @@
+# - 04-10-2024
+Se agrego a la clase king la funcion is castling valid
+Se agrego a la clase king la funcion is valid destination
+Se agrego a la clase king la funcion can move
 # - 02-10-2024
 Se mejoro el test de bishop con la funcion test_bishop_move_diagonal_with_obstacles
 Se mejoro el test de bishop con la funcion test_bishop_cannot_capture_same_color
