@@ -1,3 +1,6 @@
+# - 06-10-2024
+Se agrego al test de king la funcion Set Up
+Se agrego al test de king la funcion test king valid move
 # - 05-10-2024
 Se agrego a la clase king la funcion is in check
 # - 04-10-2024
