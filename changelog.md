@@ -1,3 +1,5 @@
+# - 05-10-2024
+Se agrego a la clase king la funcion is in check
 # - 04-10-2024
 Se agrego a la clase king la funcion is castling valid
 Se agrego a la clase king la funcion is valid destination

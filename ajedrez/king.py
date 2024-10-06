@@ -69,6 +69,13 @@ class King:
         for col in range(from_col, to_col + step, step):
             if self._is_in_check(board, from_row, col):
                 return False
+            
+    def _is_in_check(self, board, row, col):
+        #Verifica si el rey está en jaque en una casilla específica.
+        #Este método debería verificar si alguna pieza enemiga puede atacar la posición del rey.
+        # Aquí iría la lógica para detectar si el rey está en jaque. 
+        # Por ahora lo dejamos vacío y se puede completar más adelante.
+        pass
 
         return True
 
