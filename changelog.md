@@ -1,3 +1,6 @@
+# - 07-10-2024
+Se agrego al test de king la funcion test king cannot move out of board
+Se agrego al test de king la funcion test king cannot capture own piece
 # - 06-10-2024
 Se agrego al test de king la funcion Set Up
 Se agrego al test de king la funcion test king valid move
