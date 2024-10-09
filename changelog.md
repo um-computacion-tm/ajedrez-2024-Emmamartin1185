@@ -1,3 +1,7 @@
+# - 08-10-2024
+Se agrego a la clase chess la funcion is_playing
+Se agrego a la clase chess la funcion show_board
+Se agrego a la clase chess la funcion move
 # - 07-10-2024
 Se agrego al test de king la funcion test king cannot move out of board
 Se agrego al test de king la funcion test king cannot capture own piece
