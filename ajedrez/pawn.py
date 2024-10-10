@@ -67,3 +67,21 @@ class Pawn:
 
     def move(self):
         self.__moved__ = True
+
+    def __is_path_clear__(self, from_row, from_col, to_row, to_col, board):  
+     if from_col == to_col:  # Movimiento vertical
+            step = 1 if to_row > from_row else -1
+            for row in range(from_row + step, to_row, step):
+                if board[row][from_col] is not None:
+                    return False
+                return True
+    
+     def __can_capture__(self, to_row, to_col, board):
+        """
+        Verifica si el peón puede capturar una pieza en la casilla destino.
+        """
+        destination_piece = board[to_row][to_col]
+        # Hay una pieza enemiga en la casilla de destino
+        if destination_piece is not None and destination_piece.color != self.color:
+            return True
+        return False

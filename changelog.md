@@ -1,3 +1,6 @@
+# - 10-10-2024
+Se agrego a la clase pawn la funcion can capture
+Se agrego a la clase pawn la funcion is path clear
 # - 09-10-2024
 Se agrego al test de horse la funcion test horse capture enemy
 Se agrego al test de horse la funcion test horse cannot capture ally
