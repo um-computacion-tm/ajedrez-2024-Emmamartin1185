@@ -43,5 +43,18 @@ class TestHorse(unittest.TestCase):
         # El caballo no debe poder capturar su propia pieza
         self.assertFalse(horse.can_move(4, 4, 6, 5, self.empty_board))
 
+    def test_capture_enemy(self):
+        """Verificar que el caballo pueda capturar una pieza enemiga"""
+        self.assertTrue(self.white_horse.can_move(4, 4, 2, 2, self.board_with_enemy))
+
+    def test_cannot_capture_ally(self):
+        """Verificar que el caballo no pueda capturar una pieza aliada"""
+        self.assertFalse(self.white_horse.can_move(4, 4, 2, 2, self.board_with_ally))
+
+    def test_move_out_of_bounds(self):
+        """Verificar que el caballo no se mueva fuera de los límites del tablero"""
+        self.assertFalse(self.white_horse.can_move(0, 0, -2, 1, self.empty_board))  # Fuera del tablero (fila negativa)
+        self.assertFalse(self.white_horse.can_move(0, 0, 2, 8, self.empty_board))  # Fuera del tablero (columna mayor a 7)
+
 if __name__ == "__main__":
     unittest.main()

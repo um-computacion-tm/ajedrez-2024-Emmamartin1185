@@ -1,3 +1,7 @@
+# - 09-10-2024
+Se agrego al test de horse la funcion test horse capture enemy
+Se agrego al test de horse la funcion test horse cannot capture ally
+Se agrego al test de horse la funcion test horse move out of bounds
 # - 08-10-2024
 Se agrego a la clase chess la funcion is_playing
 Se agrego a la clase chess la funcion show_board
