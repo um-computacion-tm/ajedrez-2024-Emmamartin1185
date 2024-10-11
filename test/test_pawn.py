@@ -47,5 +47,21 @@ class TestPawn(unittest.TestCase):
         # Movimiento inválido porque no puede capturar su propia pieza
         self.assertFalse(pawn.valid_moves(6, 0, 5, 1, self.empty_board))
 
+    def test_pawn_capture(self):
+     """Verifica que el peón capture correctamente en diagonal."""
+       # Peón blanco en (4, 4), peón negro en (5, 5)
+     self.board[4][4] = Pawn("WHITE")
+     self.board[5][5] = Pawn("BLACK")
+     self.assertTrue(self.board[4][4].can_move(4, 4, 5, 5, self.board))
+
+    def test_pawn_capture_en_passant(self):
+     """Verifica que el peón capture al paso correctamente."""
+    # Peón blanco en (4, 4), peón negro en (4, 5) recién movido
+     self.board[4][4] = Pawn("WHITE")
+     self.board[4][5] = Pawn("BLACK")
+     last_move = {"piece": "PAWN", "from_row": 6, "to_row": 4, "to_col": 5}
+     self.assertTrue(self.board[4][4].can_move(4, 4, 5, 5, self.board, last_move))
+
+
 if __name__ == "__main__":
     unittest.main()    

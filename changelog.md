@@ -1,3 +1,6 @@
+# - 11-10-2024
+Se agrego al test de pawn la funcion test pawn capture en passant
+Se agrego al test de pawn la funcion test pawn capture
 # - 10-10-2024
 Se agrego a la clase pawn la funcion can capture
 Se agrego a la clase pawn la funcion is path clear
