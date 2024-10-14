@@ -1,3 +1,6 @@
+# - 13-10-2024
+Se agrego al test de king la funcion test king cannot move into check
+Se agrego al test de king la funcion test king move into check
 # - 11-10-2024
 Se agrego al test de pawn la funcion test pawn capture en passant
 Se agrego al test de pawn la funcion test pawn capture
