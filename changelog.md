@@ -1,3 +1,6 @@
+# - 14-10-2024
+Se agrego a la clase piece la funcion is_path_clear
+Se agrego a la clase piece la funcion can_capture
 # - 13-10-2024
 Se agrego al test de king la funcion test king cannot move into check
 Se agrego al test de king la funcion test king move into check

@@ -14,4 +14,9 @@ class Piece:
     def can_move(self, from_row, from_col, to_row, to_col, board):
         raise NotImplementedError("Este método debe ser implementado por las subclases")
 
-
+    def is_path_clear(self, from_row, from_col, to_row, to_col, board):
+        raise NotImplementedError("Este método debe ser implementado por las subclases")
+    
+    def can_capture(self, to_row, to_col, board):
+        raise NotImplementedError("Este método debe ser implementado por las subclases")
+                
