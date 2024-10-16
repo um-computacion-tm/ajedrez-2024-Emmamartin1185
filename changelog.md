@@ -1,3 +1,6 @@
+# - 15-10-2024
+Se agrego a la clase horse la funcion test horse cannot move invalid
+Se agrego a la clase horse la funcion test horse cannot capture ally
 # - 14-10-2024
 Se agrego a la clase piece la funcion is_path_clear
 Se agrego a la clase piece la funcion can_capture

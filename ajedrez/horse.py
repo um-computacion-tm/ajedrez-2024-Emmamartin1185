@@ -33,3 +33,23 @@ class Horse:
         elif destination_piece.color != self.color:
             return True  # Captura válida
         return False  # No puede capturar una pieza del mismo color
+    
+    def test_horse_cannot_capture_ally():
+     board = [[None] * 8 for _ in range(8)]
+     horse = Horse("WHITE")
+     ally_piece = Piece("WHITE")
+     board[6][5] = ally_piece
+    
+    # Movimiento en 'L' pero no puede capturar una pieza aliada
+    assert horse.can_move(4, 4, 6, 5, board) == False
+
+
+    def test_horse_cannot_move_invalid():
+        board = [[None] * 8 for _ in range(8)]
+        horse = Horse("WHITE")
+    
+    # Movimiento inválido (no es en 'L')
+    assert horse.can_move(4, 4, 4, 5, board) == False
+    assert horse.can_move(4, 4, 5, 5, board) == False
+
+ 
