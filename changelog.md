@@ -1,3 +1,6 @@
+# - 16-10-2024
+Se agrego a la clase horse la funcion test horse cannot capture own piece
+Se agrego a la clase horse la funcion test horse cannot move out of bounds
 # - 15-10-2024
 Se agrego a la clase horse la funcion test horse cannot move invalid
 Se agrego a la clase horse la funcion test horse cannot capture ally
