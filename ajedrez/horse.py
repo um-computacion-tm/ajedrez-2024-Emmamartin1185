@@ -34,33 +34,3 @@ class Horse:
             return True  # Captura válida
         return False  # No puede capturar una pieza del mismo color
     
-    def test_horse_cannot_capture_ally():
-     board = [[None] * 8 for _ in range(8)]
-     horse = Horse("WHITE")
-     ally_piece = Piece("WHITE")
-     board[6][5] = ally_piece
-    
-    # Movimiento en 'L' pero no puede capturar una pieza aliada
-     assert horse.can_move(4, 4, 6, 5, board) == False
-
-
-    def test_horse_cannot_move_invalid():
-        board = [[None] * 8 for _ in range(8)]
-        horse = Horse("WHITE")
-    
-    # Movimiento inválido (no es en 'L')
-        assert horse.can_move(4, 4, 4, 5, board) == False
-        assert horse.can_move(4, 4, 5, 5, board) == False
-   
-    def test_cannot_capture_own_piece(self):
-        # Supongamos que en (2,2) hay una pieza blanca
-        self.board.place_piece(self.white_horse, 2, 2)
-        self.assertFalse(self.white_horse.can_move(0, 1, 2, 2, self.board))
-    
-    def cannot_move_out_of_bounds(self):
-        # Supongamos que en (0,0) hay una pieza blanca
-        self.board.place_piece(self.white_horse, 0, 0)
-        self.assertFalse(self.white_horse.can_move(0, 0, -2, 1, self.board))  # Fuera del tablero (fila negativa)
-        self.assertFalse(self.white_horse.can_move(0, 0, 2, 8, self.board))  # Fuera del tablero (columna mayor a 7)
-
- 

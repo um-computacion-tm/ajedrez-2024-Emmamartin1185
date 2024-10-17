@@ -1,3 +1,6 @@
+# - 17-10-2024
+Se agrego a la clase horse la funcion controlled squares
+Se corrigio test metidos en la clase de horse
 # - 16-10-2024
 Se agrego a la clase horse la funcion test horse cannot capture own piece
 Se agrego a la clase horse la funcion test horse cannot move out of bounds

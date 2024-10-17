@@ -47,14 +47,29 @@ class TestHorse(unittest.TestCase):
         """Verificar que el caballo pueda capturar una pieza enemiga"""
         self.assertTrue(self.white_horse.can_move(4, 4, 2, 2, self.board_with_enemy))
 
-    def test_cannot_capture_ally(self):
-        """Verificar que el caballo no pueda capturar una pieza aliada"""
-        self.assertFalse(self.white_horse.can_move(4, 4, 2, 2, self.board_with_ally))
-
     def test_move_out_of_bounds(self):
         """Verificar que el caballo no se mueva fuera de los límites del tablero"""
         self.assertFalse(self.white_horse.can_move(0, 0, -2, 1, self.empty_board))  # Fuera del tablero (fila negativa)
         self.assertFalse(self.white_horse.can_move(0, 0, 2, 8, self.empty_board))  # Fuera del tablero (columna mayor a 7)
 
+    def test_horse_cannot_capture_ally():
+     board = [[None] * 8 for _ in range(8)]
+     horse = Horse("WHITE")
+     ally_piece = Piece("WHITE")
+     board[6][5] = ally_piece
+    
+    # Movimiento en 'L' pero no puede capturar una pieza aliada
+     assert horse.can_move(4, 4, 6, 5, board) == False
+
+
+    def test_horse_cannot_move_invalid():
+        board = [[None] * 8 for _ in range(8)]
+        horse = Horse("WHITE")
+    
+    # Movimiento inválido (no es en 'L')
+        assert horse.can_move(4, 4, 4, 5, board) == False
+        assert horse.can_move(4, 4, 5, 5, board) == False
+   
+    
 if __name__ == "__main__":
     unittest.main()
