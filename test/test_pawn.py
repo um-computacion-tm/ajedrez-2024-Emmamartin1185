@@ -61,7 +61,10 @@ class TestPawn(unittest.TestCase):
      self.board[4][5] = Pawn("BLACK")
      last_move = {"piece": "PAWN", "from_row": 6, "to_row": 4, "to_col": 5}
      self.assertTrue(self.board[4][4].can_move(4, 4, 5, 5, self.board, last_move))
-
+    
+    def test_pawn_promotion(self):
+        self.assertTrue(self.white_pawn.can_promote(7))
+        self.assertTrue(self.black_pawn.can_promote(0))
 
 if __name__ == "__main__":
     unittest.main()    

@@ -69,7 +69,11 @@ class TestHorse(unittest.TestCase):
     # Movimiento inválido (no es en 'L')
         assert horse.can_move(4, 4, 4, 5, board) == False
         assert horse.can_move(4, 4, 5, 5, board) == False
-   
+    
+    def test_controlled_squares(self):
+        controlled = self.horse.controlled_squares(3, 3, self.board)
+        expected = [(5, 4), (5, 2), (1, 4), (1, 2), (4, 5), (4, 1), (2, 5), (2, 1)]
+        self.assertCountEqual(controlled, expected)   
     
 if __name__ == "__main__":
     unittest.main()

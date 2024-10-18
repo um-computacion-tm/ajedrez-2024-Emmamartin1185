@@ -1,3 +1,7 @@
+# - 18-10-2024
+Se agrego al test de horse la funcion controlled squares
+Se agrego a la clase pawn la funcion can promote
+Se agrego al test de pawn la funcion test can promote
 # - 17-10-2024
 Se agrego a la clase horse la funcion controlled squares
 Se corrigio test metidos en la clase de horse

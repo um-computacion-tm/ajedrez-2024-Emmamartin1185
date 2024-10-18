@@ -76,7 +76,7 @@ class Pawn:
                     return False
                 return True
     
-     def __can_capture__(self, to_row, to_col, board):
+    def __can_capture__(self, to_row, to_col, board):
         """
         Verifica si el peón puede capturar una pieza en la casilla destino.
         """
@@ -85,3 +85,6 @@ class Pawn:
         if destination_piece is not None and destination_piece.color != self.color:
             return True
         return False
+    
+    def can_promote(self, to_row):
+        return (self.color == "WHITE" and to_row == 7) or (self.color == "BLACK" and to_row == 0)
