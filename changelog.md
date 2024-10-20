@@ -1,3 +1,6 @@
+# - 20-10-2024
+Se agrego al test de horse la funcion test_horse_move
+Se agrego a la clase king la funcion is_in_check
 # - 18-10-2024
 Se agrego al test de horse la funcion controlled squares
 Se agrego a la clase pawn la funcion can promote

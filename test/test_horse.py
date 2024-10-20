@@ -73,7 +73,18 @@ class TestHorse(unittest.TestCase):
     def test_controlled_squares(self):
         controlled = self.horse.controlled_squares(3, 3, self.board)
         expected = [(5, 4), (5, 2), (1, 4), (1, 2), (4, 5), (4, 1), (2, 5), (2, 1)]
-        self.assertCountEqual(controlled, expected)   
-    
+        self.assertCountEqual(controlled, expected)  
+
+    def test_horse_move(self):
+        horse = Horse("WHITE")
+        # Movimiento válido en L
+        self.assertTrue(horse.can_move(4, 4, 6, 5, self.empty_board))  # 2 hacia abajo, 1 a la derecha
+        self.assertTrue(horse.can_move(4, 4, 6, 3, self.empty_board))  # 2 hacia abajo, 1 a la izquierda
+        self.assertTrue(horse.can_move(4, 4, 5, 6, self.empty_board))  # 1 hacia abajo, 2 a la derecha
+        self.assertTrue(horse.can_move(4, 4, 5, 2, self.empty_board))  # 1 hacia abajo, 2 a la izquierda
+
+        # Movimiento válido en 'L' pero no puede capturar una pieza aliada
+        self.assertTrue(horse.can_move(4, 4, 6, 5, self.empty_board))
+
 if __name__ == "__main__":
     unittest.main()

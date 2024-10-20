@@ -1,6 +1,16 @@
+from rook import Rook
+from bishop import Bishop
+from queen import Queen
+from king import King
+from horse import Horse
+from pawn import Pawn
+from board import Board
 class King:
     def __init__(self, color):
         self.color = color
+        self.board = Board
+
+
 
     def __str__(self):
        
@@ -71,14 +81,51 @@ class King:
                 return False
             
     def _is_in_check(self, board, row, col):
-        #Verifica si el rey está en jaque en una casilla específica.
-        #Este método debería verificar si alguna pieza enemiga puede atacar la posición del rey.
-        # Aquí iría la lógica para detectar si el rey está en jaque. 
-        # Por ahora lo dejamos vacío y se puede completar más adelante.
-        pass
-
-        return True
-
     
-   
+     king_color = board[row][col].color  # Asume que el rey está en la posición dada
 
+    # Revisar las diagonales (movimientos típicos del alfil y reina)
+     directions = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+     for dr, dc in directions:
+        r, c = row + dr, col + dc
+        while 0 <= r < len(board) and 0 <= c < len(board[0]):
+            piece = board[r][c]
+            if piece is not None:
+                if piece.color != king_color and isinstance(piece, (Bishop, Queen)):
+                    return True  # Jaque por un alfil o reina
+                break
+            r += dr
+            c += dc
+
+    # Revisar las direcciones verticales y horizontales (movimientos de torre y reina)
+     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+     for dr, dc in directions:
+        r, c = row + dr, col + dc
+        while 0 <= r < len(board) and 0 <= c < len(board[0]):
+            piece = board[r][c]
+            if piece is not None:
+                if piece.color != king_color and isinstance(piece, (Rook, Queen)):
+                    return True  # Jaque por una torre o reina
+                break
+            r += dr
+            c += dc
+
+    # Revisar los movimientos del caballo
+     knight_moves = [(-2, -1), (-2, 1), (2, -1), (2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2)]
+     for dr, dc in knight_moves:
+        r, c = row + dr, col + dc
+        if 0 <= r < len(board) and 0 <= c < len(board[0]):
+            piece = board[r][c]
+            if piece is not None and piece.color != king_color and isinstance(piece, Horse):
+                return True  # Jaque por un caballo
+
+    # Revisar los peones en diagonales
+     pawn_moves = [(-1, -1), (-1, 1)] if king_color == "BLACK" else [(1, -1), (1, 1)]
+     for dr, dc in pawn_moves:
+        r, c = row + dr, col + dc
+        if 0 <= r < len(board) and 0 <= c < len(board[0]):
+            piece = board[r][c]
+            if piece is not None and piece.color != king_color and isinstance(piece, Pawn):
+                return True  # Jaque por un peón
+
+     return False  # Si ninguna pieza enemiga está atacando al rey, no hay jaque
